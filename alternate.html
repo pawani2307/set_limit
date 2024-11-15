@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Conscious Choices</title>
+  <link rel="stylesheet" href="alternate.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Choose Your Calorie Conscious Goal</h1>
+
+    <!-- Step 1: Reason for being calorie-conscious -->
+    <div class="reason">
+      <label for="reasonSelect">Why are you being calorie-conscious?</label>
+      <select id="reasonSelect" onchange="handleReasonChange()">
+        <option value="">Select a Reason</option>
+        <option value="weightLoss">Weight Loss</option>
+        <option value="weightGain">Weight Gain</option>
+        <option value="health">Health</option>
+      </select>
+    </div>
+
+    <!-- Step 2: Ingredient selection -->
+    <div class="ingredient" id="ingredientDiv" style="display:none;">
+      <label for="ingredientSelect">Choose an Ingredient:</label>
+      <select id="ingredientSelect" onchange="displaySuggestions()">
+        <option value="">Select an Ingredient</option>
+        <option value="chocolate">Chocolate (Milk)</option>
+        <option value="icecream">Ice Cream (Full-Fat)</option>
+        <option value="pizza">Pizza (Regular)</option>
+        <option value="chips">Potato Chips</option>
+      </select>
+    </div>
+
+    <!-- Step 3: Suggestions display -->
+    <div id="suggestions" class="suggestions">
+      <p>Select a reason and ingredient to see the suggestions!</p>
+    </div>
+  </div>
+
+  <script src="alternate.js"></script>
+</body>
+</html>
